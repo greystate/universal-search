@@ -5,10 +5,19 @@
 	<title>Universal Search</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<style>
-	body { background: #white; }
+	body { background: white; font-family: sans-serif; }
 	main { display: flex; justify-content: flex-start; }
 	article { border-radius: 0.2em; background: #efefef; border: 1px solid #ddd; padding: 1em; margin: 1em;}
 	form { display: flex; flex-direction: column; gap: 10px; }
+	input[type="text"], input[type="search"] { border: 1px solid #ddd; font-size: 1rem; padding: 0.05rem 0.5rem; }
+	article:has(input[name*="api"][type="hidden"][value=""]) { border-color: red; }
+	article:has(input[name*="api"][type="hidden"][value=""])::after {
+		content: "[Missing API key]";
+		display: inline-block;
+		background: red;
+		color: white;
+		padding: 2px 4px;
+	}
 	fieldset { display: inline-block; }
 	.submission { display: flex; justify-content: flex-end; }
 	</style>
