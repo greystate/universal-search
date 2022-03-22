@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Universal Search</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<style>
+	body { background: #white; }
+	main { display: flex; justify-content: flex-start; }
+	article { border-radius: 0.2em; background: #efefef; border: 1px solid #ddd; padding: 1em; margin: 1em;}
+	form { display: flex; flex-direction: column; gap: 10px; }
+	fieldset { display: inline-block; }
+	.submission { display: flex; justify-content: flex-end; }
+	</style>
+</head>
+<body>
+<h1>Universal Search Page</h1>
+<main>
+	<article id="search-imdb">
+		<header><h2>IMDb</h2></header>
+
+		<form action="https://imdb.com/find" method="get" target="_blank">
+			<label for="imdb-q">Search query</label>
+			<input name="q" type="search" placeholder="E.g. 'star wars'" id="imdb-q">
+
+			<fieldset>
+				<legend>Search type</legend>
+				<div>
+					<input type="radio" name="s" value="tt" id="s-tt" checked>
+					<label for="s-tt">Titles</label>
+				</div>
+				<div>
+					<input type="radio" name="s" value="nm" id="s-nm">
+					<label for="s-nm">Names</label>
+				</div>
+				<hr>
+				<div>
+					<input type="checkbox" name="exact" value="true" id="exact-true">
+					<label for="exact-true">Show exact matches only</label>
+				</div>
+			</fieldset>
+
+			<p class="submission">
+				<button type="submit">Search</button>
+			</p>
+		</form>
+	</article>
+
+	<article id="search-playpilot">
+		<header><h2>PlayPilot</h2></header>
+
+		<form action="https://www.playpilot.com/dk/search/" method="get" target="_blank">
+			<label for="playpilot-q">Search query</label>
+			<input name="q" type="search" placeholder="E.g. 'the prestige'" id="playpilot-q">
+
+			<p class="submission">
+				<button type="submit">Search</button>
+			</p>
+		</form>
+	</article>
+
+	<article id="search-omdb">
+		<header><h2>OMDb API</h2></header>
+
+		<form action="https://www.omdbapi.com/" method="get" target="_blank">
+			<input type="hidden" name="apikey" value="">
+			<input type="hidden" name="r" value="xml">
+			<label for="omdb-t">Title search</label>
+			<input name="t" type="search" placeholder="E.g. 'gravity'" id="omdb-t">
+
+			<p class="submission">
+				<button type="submit">Search</button>
+			</p>
+		</form>
+	</article>
+
+	<article id="search-tmdb">
+		<header><h2>TMDb API</h2></header>
+
+		<form action="https://api.themoviedb.org/3/search/movie/" method="get" target="_blank">
+			<input type="hidden" name="api_key" value="">
+			<label for="tmdb-query">Title search</label>
+			<input name="query" type="search" placeholder="E.g. 'gravity'" id="tmdb-query">
+
+			<p class="submission">
+				<button type="submit">Search</button>
+			</p>
+		</form>
+	</article>
+</main>
+
+</body>
+</html>
