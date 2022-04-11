@@ -6,10 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<style>
 	body { background: white; font-family: sans-serif; }
-	main { display: flex; justify-content: flex-start; }
+	main { display: flex; justify-content: flex-start; flex-wrap: wrap; }
 	article { border-radius: 0.2em; background: #efefef; border: 1px solid #ddd; padding: 1em; margin: 1em;}
 	form { display: flex; flex-direction: column; gap: 10px; }
-	input[type="text"], input[type="search"] { border: 1px solid #ddd; font-size: 1rem; padding: 0.05rem 0.5rem; }
+	input[type="text"], input[type="search"], input[type="password"] { border: 1px solid #ddd; font-size: 1rem; padding: 0.05rem 0.5rem; }
 	article:has(input[name*="api"][type="hidden"][value=""]) { border-color: red; }
 	article:has(input[name*="api"][type="hidden"][value=""])::after {
 		content: "[Missing API key]";
@@ -85,10 +85,12 @@
 		<header><h2>OMDb API</h2></header>
 
 		<form action="https://www.omdbapi.com/" method="get" target="_blank">
-			<input type="hidden" name="apikey" value="">
-			<input type="hidden" name="r" value="xml">
 			<label for="omdb-t">Title search</label>
 			<input name="t" type="search" placeholder="E.g. 'gravity'" id="omdb-t">
+			<input type="hidden" name="r" value="xml">
+
+			<label for="apikey">API Key</label>
+			<input type="password" id="apikey" name="apikey" value="" data-allow-storage="yes">
 
 			<p class="submission">
 				<button type="submit">Search</button>
@@ -100,9 +102,11 @@
 		<header><h2>TMDb API</h2></header>
 
 		<form action="https://api.themoviedb.org/3/search/movie/" method="get" target="_blank">
-			<input type="hidden" name="api_key" value="">
 			<label for="tmdb-query">Title search</label>
 			<input name="query" type="search" placeholder="E.g. 'gravity'" id="tmdb-query">
+
+			<label for="api_key">API Key</label>
+			<input type="password" id="api_key" name="api_key" value="" data-allow-storage="yes">
 
 			<p class="submission">
 				<button type="submit">Search</button>
