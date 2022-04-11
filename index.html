@@ -20,6 +20,7 @@
 	}
 	fieldset { display: inline-block; }
 	.submission { display: flex; justify-content: flex-end; }
+	.actions { display: flex; }
 	</style>
 </head>
 <body>
@@ -113,7 +114,52 @@
 			</p>
 		</form>
 	</article>
+
 </main>
+
+<div class="actions">
+	<button type="button" onclick="loadKeys()">Load API keys</button>
+	<button type="button" onclick="saveKeys()">Save API keys</button>
+</div>
+
+<script>
+window.__STORAGEMOCK = {}
+function getVault() {
+	if ('localStorage' in window) {
+		return localStorage
+	} else {
+		return {
+			getItem: function(key) { return window.__STORAGEMOCK[key] },
+			setItem: function(key, value) { window.__STORAGEMOCK[key] = value }
+		}
+	}
+}
+
+function loadKeys() {
+	const vault = getVault()
+	const dataString = vault.getItem('apiKeys')
+	const data = JSON.parse(dataString)
+	if (data != null && data.length > 0) {
+		data.forEach(item => {
+			let element = document.getElementById(item.id)
+			if (element) {
+				element.value = item.value
+			}
+		})
+	}
+}
+
+function saveKeys() {
+	const vault = getVault()
+	let data = []
+	let storables = document.querySelectorAll('[data-allow-storage="yes"]')
+	storables.forEach(s => {
+		let item = { id: s.id, value: s.value }
+		data.push(item)
+	})
+	vault.setItem('apiKeys', JSON.stringify(data))
+}
+</script>
 
 </body>
 </html>
