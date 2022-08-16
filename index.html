@@ -25,7 +25,9 @@
 		display: flex; justify-content: start; flex-wrap: wrap; gap: 10px;
 		display: grid; grid-template-columns: repeat(auto-fit, minmax(26ch, 1fr));
 	}
-	h1 { text-align: center; }
+	nav ul { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 1em; list-style: none; padding: 0; }
+	nav ul {}
+	h1 { text-align: center; font-size: 2rem; }
 	article { display: flex; flex-direction: column; border-radius: 0.2em; background: #ccc8; border: 1px solid #ddd; padding: 1em; }
 	form { display: flex; flex-direction: column; gap: 10px; flex: 1; }
 	input[type="text"], input[type="search"], input[type="password"] { border: 1px solid #9998; border-radius: 2px; font-size: 1rem; padding: 0.25rem 0.8rem; margin: 0; }
@@ -85,12 +87,77 @@
 		</form>
 	</article>
 
+	<article id="search-dsn">
+		<header><h2>Dansk Sprognævn</h2></header>
+
+		<form action="https://dsn.dk/soegning/" method="get" target="_blank">
+			<label for="dsn-soegeord">Search query</label>
+			<input name="soegeord" type="search" placeholder="E.g. 'hundehandler'" id="dsn-soegeord">
+
+			<p class="submission">
+				<button type="submit">Search</button>
+			</p>
+		</form>
+	</article>
+
 	<article id="search-caniuse">
 		<header><h2>Can I Use?</h2></header>
 
 		<form action="https://caniuse.com/" method="get" target="_blank">
 			<label for="caniuse-q">Search query</label>
 			<input name="search" type="search" placeholder="E.g. 'padding-inline'" id="caniuse-q">
+
+			<p class="submission">
+				<button type="submit">Search</button>
+			</p>
+		</form>
+	</article>
+
+	<article id="search-dkhostmaster">
+		<header><h2>DK Hostmaster</h2></header>
+
+		<form action="https://www.dk-hostmaster.dk/da/find-domaenenavn" method="post" target="_blank">
+			<label for="dkhost-query">Domain name</label>
+			<input name="query" type="search" placeholder="E.g. 'vokseverk'" id="dkhost-query">
+
+			<p class="submission">
+				<button type="submit">Search</button>
+			</p>
+		</form>
+	</article>
+
+	<article id="search-vimeo">
+		<header><h2>Vimeo</h2></header>
+
+		<form action="https://vimeo.com/search/" method="get" target="_blank">
+			<label for="vimeo-q">Search query</label>
+			<input name="q" type="search" placeholder="E.g. 'westworld'" id="vimeo-q">
+
+			<p class="submission">
+				<button type="submit">Search</button>
+			</p>
+		</form>
+	</article>
+
+	<article id="search-youtube">
+		<header><h2>YouTube</h2></header>
+
+		<form action="https://www.youtube.com/results/" method="get" target="_blank">
+			<label for="youtube-q">Search query</label>
+			<input name="search_query" type="search" placeholder="E.g. 'cracking the cryptic'" id="youtube-q">
+
+			<p class="submission">
+				<button type="submit">Search</button>
+			</p>
+		</form>
+	</article>
+
+	<article id="search-phone118">
+		<header><h2>118.DK</h2></header>
+
+		<form action="https://118.dk/search/go/" method="get" target="_blank">
+			<label for="phone118-what">Search query</label>
+			<input name="what" type="search" placeholder="E.g. '12345678'" id="phone118-what">
 
 			<p class="submission">
 				<button type="submit">Search</button>
@@ -123,12 +190,30 @@
 
 		<form action="https://api.themoviedb.org/3/search/movie/" method="get" target="_blank">
 			<label for="tmdb-query">Title search</label>
-			<input name="query" type="search" placeholder="E.g. 'gravity'" id="tmdb-query">
+			<input name="query" type="search" placeholder="E.g. 'oblivion'" id="tmdb-query">
 
 			<details>
 				<summary>API</summary>
 				<label for="api_key">API Key</label>
 				<input type="password" id="api_key" name="api_key" value="" data-allow-storage="yes">
+			</details>
+
+			<p class="submission">
+				<button type="submit">Search</button>
+			</p>
+		</form>
+	</article>
+
+	<article id="search-twitter">
+		<header><h2>Twitter</h2></header>
+
+		<form action="https://twitter.com/search/" method="get" target="_blank">
+			<label for="twitter-q">Search query</label>
+			<input name="q" type="search" placeholder="E.g. 'umbraco'" id="twitter-q">
+
+			<details>
+				<summary>Help?</summary>
+				<p>You can use <kbd>(from:greystate)</kbd> or <kbd>(@greystate)</kbd> to narrow results</p>
 			</details>
 
 			<p class="submission">
