@@ -10,4 +10,6 @@ Instead of saving these in the file I've implemented a crude facility to load
 and save these, i.e. when you've entered the key in the form field(s), click the
 _Save API keys_ button to put them into your browser's **Local Storage** (this
 requires that you're running the page using either https:// or the file://
-protocols).
+protocols). You should only need to save them once - after that you can just
+load them whenever you need to call those specific services. Yes, I'll consider
+auto-loading them at some point :)
