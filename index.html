@@ -31,10 +31,15 @@
 	article { display: flex; flex-direction: column; border-radius: 0.2em; background: #ccc8; border: 1px solid #ddd; padding: 1em; }
 	form { display: flex; flex-direction: column; gap: 10px; flex: 1; }
 	input[type="text"], input[type="search"], input[type="password"] { border: 1px solid #9998; border-radius: 2px; font-size: 1rem; padding: 0.25rem 0.8rem; margin: 0; }
-	button { font-size: 1.2rem; border: 2px solid #999; padding: 0.3em 1.2em; border-radius: 3px; }
+	button { font-size: 1.2rem; background: #5636; border: 2px solid #9998; padding: 0.3em 1.2em; border-radius: 3px; }
 	fieldset { display: inline-block; }
 	.submission { display: flex; justify-content: flex-end; margin-block-start: auto; }
 	.actions { display: flex; justify-content: center; gap: 10px; margin-block-start: 1rem; }
+	@media (prefers-color-scheme: dark) {
+		article { background: #ccc4; }
+		button { }
+	}
+
 	</style>
 </head>
 <body>
