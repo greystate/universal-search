@@ -230,10 +230,11 @@
 		<form action="https://twitter.com/search/" method="get" target="_blank">
 			<label for="twitter-q">Search query</label>
 			<input name="q" type="search" placeholder="E.g. 'umbraco'" id="twitter-q">
+			<input type="hidden" name="src" value="typed_query" />
 
 			<details>
 				<summary>Help?</summary>
-				<p>You can use <kbd>(from:greystate)</kbd> or <kbd>(@greystate)</kbd> to narrow results</p>
+				<p>You can use <kbd>(from:greystate)</kbd> or <kbd>(to:greystate)</kbd> to narrow results</p>
 			</details>
 
 			<p class="submission">
