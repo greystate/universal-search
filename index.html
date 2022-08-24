@@ -173,7 +173,7 @@
 	<article id="search-youtube">
 		<header><h2>YouTube</h2></header>
 
-		<form action="https://www.youtube.com/results/" method="get" target="_blank">
+		<form action="https://www.youtube.com/results/" method="get" target="_blank" data-allow-default>
 			<label for="youtube-q">Search query</label>
 			<input name="search_query" type="search" placeholder="E.g. 'cracking the cryptic'" id="youtube-q">
 
@@ -238,7 +238,7 @@
 	<article id="search-twitter">
 		<header><h2>Twitter</h2></header>
 
-		<form action="https://twitter.com/search/" method="get" target="_blank">
+		<form action="https://twitter.com/search/" method="get" target="_blank" data-allow-default>
 			<label for="twitter-q">Search query</label>
 			<input name="q" type="search" placeholder="E.g. 'umbraco'" id="twitter-q">
 			<input type="hidden" name="src" value="typed_query" />
@@ -299,8 +299,26 @@ function saveKeys() {
 	vault.setItem('apiKeys', JSON.stringify(data))
 }
 
+function setDefault(form) {
+	const field = form.querySelector('input[type="search"][placeholder]')
+	if (field != null) {
+		const placeholder = field.getAttribute('placeholder')
+		const [input, defaultValue] = placeholder.match(/^E\.g\.:?\s*'(.*?)'\s*$/i)
+		if (defaultValue != '') {
+			field.value = defaultValue
+		}
+	}
+}
+
 const nav = document.querySelector('body > nav ul')
 nav.addEventListener('click', focusForm)
+
+const allows = document.querySelectorAll('form[data-allow-default]')
+allows.forEach(f => {
+	f.addEventListener('submit', (e) => {
+		setDefault(f)
+	})
+})
 
 function focusForm(event) {
 	const containerRef = event.target.getAttribute('href')
