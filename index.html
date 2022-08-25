@@ -301,7 +301,7 @@ function saveKeys() {
 
 function setDefault(form) {
 	const field = form.querySelector('input[type="search"][placeholder]')
-	if (field != null) {
+	if (field != null && field.value == '') {
 		const placeholder = field.getAttribute('placeholder')
 		const [input, defaultValue] = placeholder.match(/^E\.g\.:?\s*'(.*?)'\s*$/i)
 		if (defaultValue != '') {
