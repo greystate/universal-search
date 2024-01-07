@@ -51,11 +51,12 @@
 <nav>
 	<ul>
 		<li><a href="#search-caniuse">Can I Use?</a></li>
-		<li><a href="#search-dkhostmaster">DK Hostmaster</a></li>
+		<li><a href="#search-punktumdk">Punktum dk</a></li>
 		<li><a href="#search-dsn">DSN</a></li>
 		<li><a href="#search-imdb">IMDb</a></li>
 		<li><a href="#search-omdb">OMDb API</a></li>
 		<li><a href="#search-playpilot">Playpilot</a></li>
+		<li><a href="#search-letterboxd">Letterboxd</a></li>
 		<li><a href="#search-tmdb">TMDb API</a></li>
 		<li><a href="#search-twitter">Twitter</a></li>
 		<li><a href="#search-vimeo">Vimeo</a></li>
@@ -154,12 +155,12 @@
 		</form>
 	</article>
 
-	<article id="search-dkhostmaster">
-		<header><h2>DK Hostmaster</h2></header>
+	<article id="search-punktumdk">
+		<header><h2>Punktum dk</h2></header>
 
-		<form action="https://www.dk-hostmaster.dk/da/find-domaenenavn" method="post" target="_blank">
-			<label for="dkhost-query">Domain name</label>
-			<input name="query" type="search" placeholder="E.g. 'vokseverk'" id="dkhost-query">
+		<form action="https://punktum.dk/domaene/ledigt" method="get" target="_blank">
+			<label for="punktumdk-query">Domain name</label>
+			<input name="domain" type="search" placeholder="E.g. 'vokseverk'" id="punktumdk-query">
 
 			<p class="submission">
 				<button type="submit">Search</button>
