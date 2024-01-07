@@ -2,7 +2,7 @@
   "actions" : {
     "run" : {
       "enabled" : true,
-      "script" : "xsltproc -o xml\/forms.html xml\/makeforms.xslt xml\/forms.xml"
+      "script" : "xsltproc -o src\/kit\/_forms.kit src\/xslt\/makeforms.xslt src\/xml\/forms.xml"
     }
   }
 }

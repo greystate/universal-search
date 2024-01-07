@@ -8,11 +8,18 @@
 	<xsl:output method="html" indent="yes" omit-xml-declaration="yes" />
 
 	<xsl:template match="f:forms">
+		<nav>
+			<ul>
+				<xsl:for-each select="f:form">
+					<li><a href="#search-{@id}"><xsl:value-of select="f:name" /></a></li>
+				</xsl:for-each>
+			</ul>
+		</nav>
+
 		<main>
 			<xsl:apply-templates />
 		</main>
 	</xsl:template>
-
 
 	<xsl:template match="f:form">
 		<article id="search-{@id}">
@@ -22,6 +29,7 @@
 
 			<form target="_blank">
 				<xsl:copy-of select="@action | @method" />
+				<xsl:if test="@allow-default = 'yes'"><xsl:attribute name="data-allow-default" /></xsl:if>
 				<xsl:apply-templates />
 
 				<p class="submission">
@@ -36,7 +44,6 @@
 		<label for="{$fieldId}"><xsl:value-of select="@label" /></label>
 		<input name="{@name}" type="search" placeholder="{@placeholder}" id="{$fieldId}">
 			<xsl:if test="@autofocus = 'yes'"><xsl:attribute name="autofocus" /></xsl:if>
-			<xsl:if test="ancestor::f:form[@allow-default = 'yes']"><xsl:attribute name="data-allow-default" /></xsl:if>
 		</input>
 	</xsl:template>
 
@@ -44,7 +51,10 @@
 		<xsl:variable name="fieldId" select="concat(ancestor::f:form/@id, '-', @name)" />
 		<label for="{$fieldId}"><xsl:value-of select="@label" /></label>
 		<input name="{@name}" type="password" id="{$fieldId}">
-			<xsl:if test="@allow-storage = 'yes'"><xsl:attribute name="data-allow-storage" /></xsl:if>
+			<xsl:if test="@allow-storage = 'yes'">
+				<xsl:attribute name="data-allow-storage">yes</xsl:attribute>
+				<xsl:attribute name="id"><xsl:value-of select="$fieldId" /></xsl:attribute>
+			</xsl:if>
 		</input>
 	</xsl:template>
 

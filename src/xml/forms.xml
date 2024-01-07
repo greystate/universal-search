@@ -76,7 +76,7 @@
 		</group>
 	</form>
 
-	<form id="tmdb" action="https://api.themoviedb.org/3/search/movie/">
+	<form id="tmdb" action="https://api.themoviedb.org/3/search/movie">
 		<name>TMDb API</name>
 		<textfield name="query" label="Title search" placeholder="E.g. 'oblivion'" />
 
