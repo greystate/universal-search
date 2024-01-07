@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns="http://xmlns.greystate.dk/2024/forms">
+	<form id="punktumdk" action="https://punktum.dk/domaene/ledigt/">
+		<name>Punktum dk</name>
+		<textfield label="Domain name" name="domain" placeholder="E.g. 'vokseverk'" />
+	</form>
+
+	<form id="vimeo" action="https://vimeo.com/search/">
+		<name>Vimeo</name>
+		<textfield label="Search query" name="q" placeholder="E.g. 'westworld'" />
+	</form>
+
+	<form id="imdb" action="https://imdb.com/find">
+		<name>IMDb</name>
+		<textfield label="Search query" name="q" placeholder="E.g. 'star wars'" autofocus="yes" />
+
+		<group legend="Search type">
+			<picker type="single" name="s">
+				<option value="tt">Titles</option>
+				<option value="nm">Names</option>
+			</picker>
+
+			<divider />
+
+			<toggle name="exact" value="true">Show exact matches only</toggle>
+
+			<divider />
+
+			<text>
+				<small>Do you need the <a href="https://www.imdb.com/search/" target="_blank">Advanced Search</a>,
+				e.g. <a href="https://www.imdb.com/search/common/" target="_blank">Collaborations</a></small>
+			</text>
+		</group>
+	</form>
+
+	<form id="letterboxd" action="https://letterboxd.com/search/">
+		<name>Letterboxd</name>
+		<textfield label="Search query" name="q" placeholder="E.g. 'forrest gump'" autofocus="yes" />
+		<data name="t" value="titles" />
+	</form>
+
+	<form id="playpilot" action="https://www.playpilot.com/dk/search/">
+		<name>PlayPilot</name>
+		<textfield label="Search query" name="q" placeholder="E.g. 'the prestige'" />
+		<data name="t" value="titles" />
+	</form>
+
+	<form id="dsn" action="https://dsn.dk/soegning/">
+		<name>Dansk Sprognævn</name>
+		<textfield label="Search query" name="soegeord" placeholder="E.g. 'hundehandler'" />
+	</form>
+
+	<form id="caniuse" action="https://caniuse.com/">
+		<name>Can I Use?</name>
+		<textfield label="Search query" name="search" placeholder="E.g. 'padding-inline'" />
+	</form>
+
+	<form id="youtube" action="https://www.youtube.com/results/" allow-default="yes">
+		<name>YouTube</name>
+		<textfield name="search_query" placeholder="E.g. 'cracking the cryptic'" />
+	</form>
+
+	<form id="phone118" action="https://118.dk/search/go/">
+		<name>118.dk</name>
+		<textfield name="what" placeholder="E.g. '12345678'" />
+	</form>
+
+	<form id="omdb" action="https://www.omdbapi.com/">
+		<name>OMDb API</name>
+
+		<textfield name="t" label="Title search" placeholder="E.g. 'gravity'" />
+		<data name="r" value="xml" />
+
+		<group legend="API" collapse="yes">
+			<secret name="apikey" label="API Key" allow-storage="yes" />
+		</group>
+	</form>
+
+	<form id="tmdb" action="https://api.themoviedb.org/3/search/movie/">
+		<name>TMDb API</name>
+		<textfield name="query" label="Title search" placeholder="E.g. 'oblivion'" />
+
+		<group legend="API" collapse="yes">
+			<secret name="api_key" label="API Key" allow-storage="yes" />
+		</group>
+	</form>
+
+</forms>

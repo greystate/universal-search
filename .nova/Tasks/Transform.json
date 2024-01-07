@@ -1,0 +1,8 @@
+{
+  "actions" : {
+    "run" : {
+      "enabled" : true,
+      "script" : "xsltproc -o xml\/forms.html xml\/makeforms.xslt xml\/forms.xml"
+    }
+  }
+}
