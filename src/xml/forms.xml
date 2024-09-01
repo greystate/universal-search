@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <forms xmlns="http://xmlns.greystate.dk/2024/forms">
+
+	<form id="valdemarsro" action="https://www.valdemarsro.dk/soeg/" xml:lang="da">
+		<name>Valdemarsro</name>
+		<textfield name="q" label="Opskrift" placeholder="F.eks. 'frikadeller'" />
 	</form>
 
 	<form id="caniuse" action="https://caniuse.com/">
