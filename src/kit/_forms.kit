@@ -1,25 +1,27 @@
 <nav><ul>
+<li><a href="#search-valdemarsro">Valdemarsro</a></li>
+<li><a href="#search-caniuse">Can I Use?</a></li>
+<li><a href="#search-imdb">IMDb</a></li>
+<li><a href="#search-youtube">YouTube</a></li>
 <li><a href="#search-punktumdk">Punktum dk</a></li>
 <li><a href="#search-vimeo">Vimeo</a></li>
-<li><a href="#search-imdb">IMDb</a></li>
 <li><a href="#search-letterboxd">Letterboxd</a></li>
 <li><a href="#search-playpilot">PlayPilot</a></li>
 <li><a href="#search-dsn">Dansk Sprognævn</a></li>
-<li><a href="#search-caniuse">Can I Use?</a></li>
-<li><a href="#search-youtube">YouTube</a></li>
 <li><a href="#search-phone118">118.dk</a></li>
 <li><a href="#search-omdb">OMDb API</a></li>
 <li><a href="#search-tmdb">TMDb API</a></li>
 </ul></nav><main>
-	<article id="search-punktumdk"><header><h2>Punktum dk</h2></header><form target="_blank" action="https://punktum.dk/domaene/ledigt/">
+
+	<article id="search-valdemarsro"><header><h2>Valdemarsro</h2></header><form target="_blank" action="https://www.valdemarsro.dk/soeg/">
 		
-		<label for="punktumdk-domain">Domain name</label><input name="domain" type="search" placeholder="E.g. 'vokseverk'" id="punktumdk-domain">
+		<label for="valdemarsro-q">Opskrift</label><input name="q" type="search" placeholder="F.eks. 'frikadeller'" id="valdemarsro-q">
 	<p class="submission"><button type="submit">Search</button></p>
 </form></article>
 
-	<article id="search-vimeo"><header><h2>Vimeo</h2></header><form target="_blank" action="https://vimeo.com/search/">
+	<article id="search-caniuse"><header><h2>Can I Use?</h2></header><form target="_blank" action="https://caniuse.com/">
 		
-		<label for="vimeo-q">Search query</label><input name="q" type="search" placeholder="E.g. 'westworld'" id="vimeo-q">
+		<label for="caniuse-search">Search query</label><input name="search" type="search" placeholder="E.g. 'padding-inline'" id="caniuse-search">
 	<p class="submission"><button type="submit">Search</button></p>
 </form></article>
 
@@ -30,10 +32,10 @@
 		<fieldset>
 <legend>Search type</legend>
 			<div>
-<input type="radio" id="s-tt" value="tt" checked><label for="s-tt">Titles</label>
+<input type="radio" name="s" id="s-tt" value="tt" checked><label for="s-tt">Titles</label>
 </div>
 <div>
-<input type="radio" id="s-nm" value="nm"><label for="s-nm">Names</label>
+<input type="radio" name="s" id="s-nm" value="nm"><label for="s-nm">Names</label>
 </div>
 
 			<hr>
@@ -49,6 +51,24 @@
 				e.g. <a href="https://www.imdb.com/search/common/" target="_blank">Collaborations</a></small>
 			
 		</fieldset>
+	<p class="submission"><button type="submit">Search</button></p>
+</form></article>
+
+	<article id="search-youtube"><header><h2>YouTube</h2></header><form target="_blank" action="https://www.youtube.com/results/" data-allow-default="">
+		
+		<label for="youtube-search_query"></label><input name="search_query" type="search" placeholder="E.g. 'cracking the cryptic'" id="youtube-search_query">
+	<p class="submission"><button type="submit">Search</button></p>
+</form></article>
+
+	<article id="search-punktumdk"><header><h2>Punktum dk</h2></header><form target="_blank" action="https://punktum.dk/domaene/ledigt/">
+		
+		<label for="punktumdk-domain">Domain name</label><input name="domain" type="search" placeholder="E.g. 'vokseverk'" id="punktumdk-domain">
+	<p class="submission"><button type="submit">Search</button></p>
+</form></article>
+
+	<article id="search-vimeo"><header><h2>Vimeo</h2></header><form target="_blank" action="https://vimeo.com/search/">
+		
+		<label for="vimeo-q">Search query</label><input name="q" type="search" placeholder="E.g. 'westworld'" id="vimeo-q">
 	<p class="submission"><button type="submit">Search</button></p>
 </form></article>
 
@@ -69,18 +89,6 @@
 	<article id="search-dsn"><header><h2>Dansk Sprognævn</h2></header><form target="_blank" action="https://dsn.dk/soegning/">
 		
 		<label for="dsn-soegeord">Search query</label><input name="soegeord" type="search" placeholder="E.g. 'hundehandler'" id="dsn-soegeord">
-	<p class="submission"><button type="submit">Search</button></p>
-</form></article>
-
-	<article id="search-caniuse"><header><h2>Can I Use?</h2></header><form target="_blank" action="https://caniuse.com/">
-		
-		<label for="caniuse-search">Search query</label><input name="search" type="search" placeholder="E.g. 'padding-inline'" id="caniuse-search">
-	<p class="submission"><button type="submit">Search</button></p>
-</form></article>
-
-	<article id="search-youtube"><header><h2>YouTube</h2></header><form target="_blank" action="https://www.youtube.com/results/" data-allow-default="">
-		
-		<label for="youtube-search_query"></label><input name="search_query" type="search" placeholder="E.g. 'cracking the cryptic'" id="youtube-search_query">
 	<p class="submission"><button type="submit">Search</button></p>
 </form></article>
 

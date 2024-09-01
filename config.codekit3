@@ -7,7 +7,7 @@
       "uuidString" : "AB093145-D5AD-4535-A64D-AF55B58CD8B4"
     }
   ],
-  "creatorBuild" : "34564",
+  "creatorBuild" : "34576",
   "files" : {
     "\/.gitattributes" : {
       "cB" : 0,
@@ -38,6 +38,12 @@
       "oA" : 1,
       "oAP" : "\/build\/apikeys.config",
       "oF" : 1
+    },
+    "\/build" : {
+      "ft" : 65536,
+      "oA" : 1,
+      "oAP" : "\/build\/build",
+      "oF" : 0
     },
     "\/Cartridge-Bold.woff2" : {
       "cB" : 0,
