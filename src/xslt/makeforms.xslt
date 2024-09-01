@@ -76,8 +76,8 @@
 		<xsl:for-each select="f:option">
 			<xsl:variable name="optionId" select="concat(../@name, '-', @value)" />
 			<div>
-				<input type="radio" id="{$optionId}">
-					<xsl:copy-of select="@name | @value" />
+				<input type="radio" name="{../@name}" id="{$optionId}">
+					<xsl:copy-of select="@value" />
 					<xsl:if test="position() = 1"><xsl:attribute name="checked" /></xsl:if>
 				</input>
 				<label for="{$optionId}"><xsl:value-of select="." /></label>
