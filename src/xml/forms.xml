@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <forms xmlns="http://xmlns.greystate.dk/2024/forms">
-	<form id="punktumdk" action="https://punktum.dk/domaene/ledigt/">
-		<name>Punktum dk</name>
-		<textfield label="Domain name" name="domain" placeholder="E.g. 'vokseverk'" />
 	</form>
 
-	<form id="vimeo" action="https://vimeo.com/search/">
-		<name>Vimeo</name>
-		<textfield label="Search query" name="q" placeholder="E.g. 'westworld'" />
+	<form id="caniuse" action="https://caniuse.com/">
+		<name>Can I Use?</name>
+		<textfield label="Search query" name="search" placeholder="E.g. 'padding-inline'" />
 	</form>
 
 	<form id="imdb" action="https://imdb.com/find">
@@ -33,6 +30,21 @@
 		</group>
 	</form>
 
+	<form id="youtube" action="https://www.youtube.com/results/" allow-default="yes">
+		<name>YouTube</name>
+		<textfield name="search_query" placeholder="E.g. 'cracking the cryptic'" />
+	</form>
+
+	<form id="punktumdk" action="https://punktum.dk/domaene/ledigt/">
+		<name>Punktum dk</name>
+		<textfield label="Domain name" name="domain" placeholder="E.g. 'vokseverk'" />
+	</form>
+
+	<form id="vimeo" action="https://vimeo.com/search/">
+		<name>Vimeo</name>
+		<textfield label="Search query" name="q" placeholder="E.g. 'westworld'" />
+	</form>
+
 	<form id="letterboxd" action="https://letterboxd.com/search/">
 		<name>Letterboxd</name>
 		<textfield label="Search query" name="q" placeholder="E.g. 'forrest gump'" autofocus="yes" />
@@ -48,16 +60,6 @@
 	<form id="dsn" action="https://dsn.dk/soegning/">
 		<name>Dansk Sprognævn</name>
 		<textfield label="Search query" name="soegeord" placeholder="E.g. 'hundehandler'" />
-	</form>
-
-	<form id="caniuse" action="https://caniuse.com/">
-		<name>Can I Use?</name>
-		<textfield label="Search query" name="search" placeholder="E.g. 'padding-inline'" />
-	</form>
-
-	<form id="youtube" action="https://www.youtube.com/results/" allow-default="yes">
-		<name>YouTube</name>
-		<textfield name="search_query" placeholder="E.g. 'cracking the cryptic'" />
 	</form>
 
 	<form id="phone118" action="https://118.dk/search/go/">
