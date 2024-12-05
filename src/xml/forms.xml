@@ -3,7 +3,12 @@
 
 	<form id="valdemarsro" action="https://www.valdemarsro.dk/soeg/" xml:lang="da">
 		<name>Valdemarsro</name>
-		<textfield name="q" label="Opskrift" placeholder="F.eks. 'frikadeller'" />
+		<textfield name="q" label="Opskrift" placeholder="F.eks. 'mango'" />
+	</form>
+
+	<form id="madensverden" action="https://madensverden.dk/" xml:lang="da">
+		<name>Madens Verden</name>
+		<textfield name="s" label="Opskrift" placeholder="F.eks. 'frikadeller'" />
 	</form>
 
 	<form id="caniuse" action="https://caniuse.com/">
