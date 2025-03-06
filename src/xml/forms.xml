@@ -96,4 +96,11 @@
 		</group>
 	</form>
 
+	<form id="dict-reverse" action="https://www.onelook.com/reverse-dictionary.shtml">
+		<name>Reverse Dictionary</name>
+
+		<textfield name="s" label="Search for" placeholder="E.g. 'strong wind'" />
+		<data name="loc" value="revfp" />
+	</form>
+
 </forms>
