@@ -45,7 +45,7 @@
 	</form>
 
 	<form id="punktumdk" action="https://punktum.dk/domaene/ledigt/">
-		<name>Punktum dk</name>
+		<name>.dk</name>
 		<textfield label="Domain name" name="domain" placeholder="E.g. 'vokseverk'" />
 	</form>
 
