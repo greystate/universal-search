@@ -66,6 +66,11 @@
 		<data name="t" value="titles" />
 	</form>
 
+	<form id="justwatch" action="https://www.justwatch.com/dk/search/">
+		<name>JustWatch</name>
+		<textfield label="Search query" name="q" placeholder="E.g. 'tenet'" />
+	</form>
+
 	<form id="dsn" action="https://ro.dsn.dk/">
 		<name>Dansk Sprognævn</name>
 		<textfield label="Search query" name="soegeord" placeholder="E.g. 'hundehandler'" />
@@ -94,6 +99,11 @@
 		<group legend="API" collapse="yes">
 			<secret name="api_key" label="API Key" allow-storage="yes" />
 		</group>
+	</form>
+
+	<form id="regex" action="https://www.regexdictionary.com/regex/">
+		<name>RegEx Dictionary</name>
+		<textfield label="RegEx" name="r" placeholder="E.g. '?r=^pin(s|ned)$'" />
 	</form>
 
 	<form id="dict-reverse" action="https://www.onelook.com/reverse-dictionary.shtml">
