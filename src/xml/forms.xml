@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <forms xmlns="http://xmlns.greystate.dk/2024/forms">
 
-	<form id="valdemarsro" action="https://www.valdemarsro.dk/soeg/" xml:lang="da">
+	<form id="valdemarsro" action="https://www.valdemarsro.dk/soeg/" xml:lang="da" allow-default="yes">
 		<name>Valdemarsro</name>
 		<textfield name="q" label="Opskrift" placeholder="F.eks. 'mango'" />
 	</form>
@@ -17,7 +17,7 @@
 	</form>
 
 	<form id="imdb" action="https://imdb.com/find">
-		<name>IMDb</name>
+		<name>IMDb / Movies</name>
 		<textfield label="Search query" name="q" placeholder="E.g. 'star wars'" autofocus="yes" />
 
 		<group legend="Search type">
@@ -39,9 +39,9 @@
 		</group>
 	</form>
 
-	<form id="youtube" action="https://www.youtube.com/results/" allow-default="yes">
+	<form id="youtube" action="https://www.youtube.com/results/" allow-default="yes" default-from="imdb" default-template="$value trailer">
 		<name>YouTube</name>
-		<textfield name="search_query" placeholder="E.g. 'cracking the cryptic'" />
+		<textfield label="Video" name="search_query" placeholder="E.g. 'cracking the cryptic'" />
 	</form>
 
 	<form id="punktumdk" action="https://punktum.dk/domaene/ledigt/">
@@ -56,7 +56,7 @@
 
 	<form id="letterboxd" action="https://letterboxd.com/search/">
 		<name>Letterboxd</name>
-		<textfield label="Search query" name="q" placeholder="E.g. 'forrest gump'" autofocus="yes" />
+		<textfield label="Search query" name="q" placeholder="E.g. 'forrest gump'" />
 		<data name="t" value="titles" />
 	</form>
 

@@ -2,19 +2,22 @@
 <li><a href="#search-valdemarsro">Valdemarsro</a></li>
 <li><a href="#search-madensverden">Madens Verden</a></li>
 <li><a href="#search-caniuse">Can I Use?</a></li>
-<li><a href="#search-imdb">IMDb</a></li>
+<li><a href="#search-imdb">IMDb / Movies</a></li>
 <li><a href="#search-youtube">YouTube</a></li>
 <li><a href="#search-punktumdk">.dk</a></li>
 <li><a href="#search-vimeo">Vimeo</a></li>
 <li><a href="#search-letterboxd">Letterboxd</a></li>
 <li><a href="#search-playpilot">PlayPilot</a></li>
+<li><a href="#search-justwatch">JustWatch</a></li>
 <li><a href="#search-dsn">Dansk Sprognævn</a></li>
 <li><a href="#search-phone118">118.dk</a></li>
 <li><a href="#search-omdb">OMDb API</a></li>
 <li><a href="#search-tmdb">TMDb API</a></li>
+<li><a href="#search-regex">RegEx Dictionary</a></li>
+<li><a href="#search-dict-reverse">Reverse Dictionary</a></li>
 </ul></nav><main>
 
-	<article id="search-valdemarsro"><header><h2>Valdemarsro</h2></header><form target="_blank" action="https://www.valdemarsro.dk/soeg/">
+	<article id="search-valdemarsro"><header><h2>Valdemarsro</h2></header><form target="_blank" action="https://www.valdemarsro.dk/soeg/" data-allow-default="">
 		
 		<label for="valdemarsro-q">Opskrift</label><input name="q" type="search" placeholder="F.eks. 'mango'" id="valdemarsro-q">
 	<p class="submission"><button type="submit">Search</button></p>
@@ -32,7 +35,7 @@
 	<p class="submission"><button type="submit">Search</button></p>
 </form></article>
 
-	<article id="search-imdb"><header><h2>IMDb</h2></header><form target="_blank" action="https://imdb.com/find">
+	<article id="search-imdb"><header><h2>IMDb / Movies</h2></header><form target="_blank" action="https://imdb.com/find">
 		
 		<label for="imdb-q">Search query</label><input name="q" type="search" placeholder="E.g. 'star wars'" id="imdb-q" autofocus="">
 
@@ -61,9 +64,9 @@
 	<p class="submission"><button type="submit">Search</button></p>
 </form></article>
 
-	<article id="search-youtube"><header><h2>YouTube</h2></header><form target="_blank" action="https://www.youtube.com/results/" data-allow-default="">
+	<article id="search-youtube"><header><h2>YouTube</h2></header><form target="_blank" action="https://www.youtube.com/results/" data-allow-default="" data-default-from="imdb" data-default-template="$value trailer">
 		
-		<label for="youtube-search_query"></label><input name="search_query" type="search" placeholder="E.g. 'cracking the cryptic'" id="youtube-search_query">
+		<label for="youtube-search_query">Video</label><input name="search_query" type="search" placeholder="E.g. 'cracking the cryptic'" id="youtube-search_query">
 	<p class="submission"><button type="submit">Search</button></p>
 </form></article>
 
@@ -81,7 +84,7 @@
 
 	<article id="search-letterboxd"><header><h2>Letterboxd</h2></header><form target="_blank" action="https://letterboxd.com/search/">
 		
-		<label for="letterboxd-q">Search query</label><input name="q" type="search" placeholder="E.g. 'forrest gump'" id="letterboxd-q" autofocus="">
+		<label for="letterboxd-q">Search query</label><input name="q" type="search" placeholder="E.g. 'forrest gump'" id="letterboxd-q">
 		<input type="hidden" name="t" value="titles">
 	<p class="submission"><button type="submit">Search</button></p>
 </form></article>
@@ -90,6 +93,12 @@
 		
 		<label for="playpilot-q">Search query</label><input name="q" type="search" placeholder="E.g. 'the prestige'" id="playpilot-q">
 		<input type="hidden" name="t" value="titles">
+	<p class="submission"><button type="submit">Search</button></p>
+</form></article>
+
+	<article id="search-justwatch"><header><h2>JustWatch</h2></header><form target="_blank" action="https://www.justwatch.com/dk/search/">
+		
+		<label for="justwatch-q">Search query</label><input name="q" type="search" placeholder="E.g. 'tenet'" id="justwatch-q">
 	<p class="submission"><button type="submit">Search</button></p>
 </form></article>
 
@@ -124,6 +133,20 @@
 		<details><summary>API</summary>
 			<label for="tmdb-api_key">API Key</label><input name="api_key" type="password" id="tmdb-api_key" data-allow-storage="yes">
 		</details>
+	<p class="submission"><button type="submit">Search</button></p>
+</form></article>
+
+	<article id="search-regex"><header><h2>RegEx Dictionary</h2></header><form target="_blank" action="https://www.regexdictionary.com/regex/">
+		
+		<label for="regex-r">RegEx</label><input name="r" type="search" placeholder="E.g. '?r=^pin(s|ned)$'" id="regex-r">
+	<p class="submission"><button type="submit">Search</button></p>
+</form></article>
+
+	<article id="search-dict-reverse"><header><h2>Reverse Dictionary</h2></header><form target="_blank" action="https://www.onelook.com/reverse-dictionary.shtml">
+		
+
+		<label for="dict-reverse-s">Search for</label><input name="s" type="search" placeholder="E.g. 'strong wind'" id="dict-reverse-s">
+		<input type="hidden" name="loc" value="revfp">
 	<p class="submission"><button type="submit">Search</button></p>
 </form></article>
 

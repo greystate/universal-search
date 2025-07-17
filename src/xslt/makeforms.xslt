@@ -30,6 +30,8 @@
 			<form target="_blank">
 				<xsl:copy-of select="@action | @method" />
 				<xsl:if test="@allow-default = 'yes'"><xsl:attribute name="data-allow-default" /></xsl:if>
+				<xsl:if test="@default-from"><xsl:attribute name="data-default-from"><xsl:value-of select="@default-from" /></xsl:attribute></xsl:if>
+				<xsl:if test="@default-template"><xsl:attribute name="data-default-template"><xsl:value-of select="@default-template" /></xsl:attribute></xsl:if>
 				<xsl:apply-templates />
 
 				<p class="submission">

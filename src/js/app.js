@@ -35,11 +35,23 @@ function saveKeys() {
 	vault.setItem('apiKeys', JSON.stringify(data))
 }
 
-function setDefault(form) {
+function setDefault(form, fromForm, template) {
 	const field = form.querySelector('input[type="search"][placeholder]')
+	let source = field
+	let input, defaultValue
+
+	if (fromForm != null) {
+		source = document.querySelector(`#search-${fromForm} input[type="search"]`)
+	}
+
 	if (field != null && field.value == '') {
-		const placeholder = field.getAttribute('placeholder')
-		const [input, defaultValue] = placeholder.match(/^E\.g\.:?\s*'(.*?)'\s*$/i)
+		if (template != null && source.value != '') {
+			defaultValue = template.replace('$value', source.value)
+		} else {
+			const placeholder = field.getAttribute('placeholder'); // ';' is necessary here... ¯\_(ツ)_/¯
+			[input, defaultValue] = placeholder.match(/^E\.g\.:?\s*'(.*?)'\s*$/i)
+		}
+
 		if (defaultValue != '') {
 			field.value = defaultValue
 		}
@@ -50,9 +62,12 @@ const nav = document.querySelector('body > nav ul')
 nav.addEventListener('click', focusForm)
 
 const allows = document.querySelectorAll('form[data-allow-default]')
+
 allows.forEach(f => {
+	const from = f.dataset.defaultFrom
+	const template = f.dataset.defaultTemplate
 	f.addEventListener('submit', (e) => {
-		setDefault(f)
+		setDefault(f, from, template)
 	})
 })
 
