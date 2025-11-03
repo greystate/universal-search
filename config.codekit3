@@ -7,7 +7,7 @@
       "uuidString" : "AB093145-D5AD-4535-A64D-AF55B58CD8B4"
     }
   ],
-  "creatorBuild" : "34704",
+  "creatorBuild" : "34892",
   "files" : {
     "\/.gitattributes" : {
       "cB" : 0,
@@ -1096,6 +1096,9 @@
         "active" : 0,
         "optionString" : "{'skipBlankLines': false, 'ignoreComments': false}"
       },
+      "no-unassigned-vars" : {
+        "active" : 0
+      },
       "no-undef" : {
         "active" : 1,
         "optionString" : "{'typeof': false}"
@@ -1176,7 +1179,8 @@
         "active" : 0
       },
       "no-useless-escape" : {
-        "active" : 1
+        "active" : 1,
+        "optionString" : "{'allowRegexCharacters': []}"
       },
       "no-useless-rename" : {
         "active" : 0,
