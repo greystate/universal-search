@@ -46,6 +46,7 @@
 		<label for="{$fieldId}"><xsl:value-of select="@label" /></label>
 		<input name="{@name}" type="search" placeholder="{@placeholder}" id="{$fieldId}">
 			<xsl:if test="@autofocus = 'yes'"><xsl:attribute name="autofocus" /></xsl:if>
+			<xsl:if test="@template"><xsl:attribute name="data-template"><xsl:value-of select="@template" /></xsl:attribute></xsl:if>
 		</input>
 	</xsl:template>
 

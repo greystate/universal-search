@@ -71,6 +71,21 @@ allows.forEach(f => {
 	})
 })
 
+const formattedFields = document.querySelectorAll('input[data-template]')
+formattedFields.forEach(f => {
+	f.form.addEventListener('submit', (e) => {
+		expandTemplate(f)
+	})
+})
+
+function expandTemplate(field) {
+	const template = field.dataset.template
+	if (template != null && field.value != '') {
+		const expandedValue = template.replace('$value', field.value)
+		field.value = expandedValue
+	}
+}
+
 function focusForm(event) {
 	const containerRef = event.target.getAttribute('href')
 

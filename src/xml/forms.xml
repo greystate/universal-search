@@ -11,11 +11,6 @@
 		<textfield name="s" label="Opskrift" placeholder="F.eks. 'frikadeller'" />
 	</form>
 
-	<form id="caniuse" action="https://caniuse.com/">
-		<name>Can I Use?</name>
-		<textfield label="Search query" name="search" placeholder="E.g. 'padding-inline'" />
-	</form>
-
 	<form id="imdb" action="https://imdb.com/find">
 		<name>IMDb / Movies</name>
 		<textfield label="Search query" name="q" placeholder="E.g. 'star wars'" autofocus="yes" />
@@ -44,6 +39,22 @@
 		<textfield label="Video" name="search_query" placeholder="E.g. 'cracking the cryptic'" />
 	</form>
 
+	<form id="umbraco-source" action="https://github.com/search">
+		<name>Umbraco Sourcecode</name>
+		<textfield label="Search query" name="q" placeholder="E.g. 'IPublishedContent'" template="repo:umbraco/Umbraco-CMS $value" />
+		<data name="type" value="code" />
+	</form>
+
+	<form action="https://www.rottentomatoes.com/search/" allow-default="yes" default-from="imdb" default-template="$value">
+		<name>Rotten Tomatoes</name>
+		<textfield label="Search query" name="search" placeholder="E.g. 'the shawshank redemption'" />
+	</form>
+
+	<form id="caniuse" action="https://caniuse.com/">
+		<name>Can I Use?</name>
+		<textfield label="Search query" name="search" placeholder="E.g. 'padding-inline'" />
+	</form>
+
 	<form id="punktumdk" action="https://punktum.dk/domaene/ledigt/">
 		<name>.dk</name>
 		<textfield label="Domain name" name="domain" placeholder="E.g. 'vokseverk'" />
@@ -60,13 +71,13 @@
 		<data name="t" value="titles" />
 	</form>
 
-	<form id="playpilot" action="https://www.playpilot.com/dk/search/">
+	<form id="playpilot" action="https://www.playpilot.com/dk/search/" allow-default="yes" default-from="imdb" default-template="$value">
 		<name>PlayPilot</name>
 		<textfield label="Search query" name="q" placeholder="E.g. 'the prestige'" />
 		<data name="t" value="titles" />
 	</form>
 
-	<form id="justwatch" action="https://www.justwatch.com/dk/search/">
+	<form id="justwatch" action="https://www.justwatch.com/dk/search/" allow-default="yes" default-from="imdb" default-template="$value">
 		<name>JustWatch</name>
 		<textfield label="Search query" name="q" placeholder="E.g. 'tenet'" />
 	</form>
@@ -103,7 +114,7 @@
 
 	<form id="regex" action="https://www.regexdictionary.com/regex/">
 		<name>RegEx Dictionary</name>
-		<textfield label="RegEx" name="r" placeholder="E.g. '?r=^pin(s|ned)$'" />
+		<textfield label="RegEx" name="r" placeholder="E.g. '^pin(s|ned)$'" />
 	</form>
 
 	<form id="dict-reverse" action="https://www.onelook.com/reverse-dictionary.shtml">

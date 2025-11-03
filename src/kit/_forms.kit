@@ -1,9 +1,11 @@
 <nav><ul>
 <li><a href="#search-valdemarsro">Valdemarsro</a></li>
 <li><a href="#search-madensverden">Madens Verden</a></li>
-<li><a href="#search-caniuse">Can I Use?</a></li>
 <li><a href="#search-imdb">IMDb / Movies</a></li>
 <li><a href="#search-youtube">YouTube</a></li>
+<li><a href="#search-umbraco-source">Umbraco Sourcecode</a></li>
+<li><a href="#search-">Rotten Tomatoes</a></li>
+<li><a href="#search-caniuse">Can I Use?</a></li>
 <li><a href="#search-punktumdk">.dk</a></li>
 <li><a href="#search-vimeo">Vimeo</a></li>
 <li><a href="#search-letterboxd">Letterboxd</a></li>
@@ -26,12 +28,6 @@
 	<article id="search-madensverden"><header><h2>Madens Verden</h2></header><form target="_blank" action="https://madensverden.dk/">
 		
 		<label for="madensverden-s">Opskrift</label><input name="s" type="search" placeholder="F.eks. 'frikadeller'" id="madensverden-s">
-	<p class="submission"><button type="submit">Search</button></p>
-</form></article>
-
-	<article id="search-caniuse"><header><h2>Can I Use?</h2></header><form target="_blank" action="https://caniuse.com/">
-		
-		<label for="caniuse-search">Search query</label><input name="search" type="search" placeholder="E.g. 'padding-inline'" id="caniuse-search">
 	<p class="submission"><button type="submit">Search</button></p>
 </form></article>
 
@@ -70,6 +66,25 @@
 	<p class="submission"><button type="submit">Search</button></p>
 </form></article>
 
+	<article id="search-umbraco-source"><header><h2>Umbraco Sourcecode</h2></header><form target="_blank" action="https://github.com/search">
+		
+		<label for="umbraco-source-q">Search query</label><input name="q" type="search" placeholder="E.g. 'IPublishedContent'" id="umbraco-source-q" data-template="repo:umbraco/Umbraco-CMS $value">
+		<input type="hidden" name="type" value="code">
+	<p class="submission"><button type="submit">Search</button></p>
+</form></article>
+
+	<article id="search-"><header><h2>Rotten Tomatoes</h2></header><form target="_blank" action="https://www.rottentomatoes.com/search/" data-allow-default="" data-default-from="imdb" data-default-template="$value">
+		
+		<label for="-search">Search query</label><input name="search" type="search" placeholder="E.g. 'the shawshank redemption'" id="-search">
+	<p class="submission"><button type="submit">Search</button></p>
+</form></article>
+
+	<article id="search-caniuse"><header><h2>Can I Use?</h2></header><form target="_blank" action="https://caniuse.com/">
+		
+		<label for="caniuse-search">Search query</label><input name="search" type="search" placeholder="E.g. 'padding-inline'" id="caniuse-search">
+	<p class="submission"><button type="submit">Search</button></p>
+</form></article>
+
 	<article id="search-punktumdk"><header><h2>.dk</h2></header><form target="_blank" action="https://punktum.dk/domaene/ledigt/">
 		
 		<label for="punktumdk-domain">Domain name</label><input name="domain" type="search" placeholder="E.g. 'vokseverk'" id="punktumdk-domain">
@@ -89,14 +104,14 @@
 	<p class="submission"><button type="submit">Search</button></p>
 </form></article>
 
-	<article id="search-playpilot"><header><h2>PlayPilot</h2></header><form target="_blank" action="https://www.playpilot.com/dk/search/">
+	<article id="search-playpilot"><header><h2>PlayPilot</h2></header><form target="_blank" action="https://www.playpilot.com/dk/search/" data-allow-default="" data-default-from="imdb" data-default-template="$value">
 		
 		<label for="playpilot-q">Search query</label><input name="q" type="search" placeholder="E.g. 'the prestige'" id="playpilot-q">
 		<input type="hidden" name="t" value="titles">
 	<p class="submission"><button type="submit">Search</button></p>
 </form></article>
 
-	<article id="search-justwatch"><header><h2>JustWatch</h2></header><form target="_blank" action="https://www.justwatch.com/dk/search/">
+	<article id="search-justwatch"><header><h2>JustWatch</h2></header><form target="_blank" action="https://www.justwatch.com/dk/search/" data-allow-default="" data-default-from="imdb" data-default-template="$value">
 		
 		<label for="justwatch-q">Search query</label><input name="q" type="search" placeholder="E.g. 'tenet'" id="justwatch-q">
 	<p class="submission"><button type="submit">Search</button></p>
@@ -138,7 +153,7 @@
 
 	<article id="search-regex"><header><h2>RegEx Dictionary</h2></header><form target="_blank" action="https://www.regexdictionary.com/regex/">
 		
-		<label for="regex-r">RegEx</label><input name="r" type="search" placeholder="E.g. '?r=^pin(s|ned)$'" id="regex-r">
+		<label for="regex-r">RegEx</label><input name="r" type="search" placeholder="E.g. '^pin(s|ned)$'" id="regex-r">
 	<p class="submission"><button type="submit">Search</button></p>
 </form></article>
 
