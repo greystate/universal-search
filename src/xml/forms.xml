@@ -45,7 +45,7 @@
 		<data name="type" value="code" />
 	</form>
 
-	<form action="https://www.rottentomatoes.com/search/" allow-default="yes" default-from="imdb" default-template="$value">
+	<form id="rotten-tomatoes" action="https://www.rottentomatoes.com/search/" allow-default="yes" default-from="imdb" default-template="$value">
 		<name>Rotten Tomatoes</name>
 		<textfield label="Search query" name="search" placeholder="E.g. 'the shawshank redemption'" />
 	</form>
