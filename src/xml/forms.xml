@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <forms xmlns="http://xmlns.greystate.dk/2024/forms">
 
-	<form id="valdemarsro" action="https://www.valdemarsro.dk/soeg/" xml:lang="da" allow-default="yes">
+	<form key="v" id="valdemarsro" action="https://www.valdemarsro.dk/soeg/" xml:lang="da" allow-default="yes">
 		<name>Valdemarsro</name>
 		<textfield name="q" label="Opskrift" placeholder="F.eks. 'mango'" />
 	</form>
@@ -11,7 +11,7 @@
 		<textfield name="s" label="Opskrift" placeholder="F.eks. 'frikadeller'" />
 	</form>
 
-	<form id="imdb" action="https://imdb.com/find">
+	<form key="m" id="imdb" action="https://imdb.com/find">
 		<name>IMDb / Movies</name>
 		<textfield label="Search query" name="q" placeholder="E.g. 'star wars'" autofocus="yes" />
 
@@ -34,12 +34,12 @@
 		</group>
 	</form>
 
-	<form id="youtube" action="https://www.youtube.com/results/" allow-default="yes" default-from="imdb" default-template="$value trailer">
+	<form key="y" id="youtube" action="https://www.youtube.com/results/" allow-default="yes" default-from="imdb" default-template="$value trailer">
 		<name>YouTube</name>
 		<textfield label="Video" name="search_query" placeholder="E.g. 'cracking the cryptic'" />
 	</form>
 
-	<form id="umbraco-source" action="https://github.com/search">
+	<form key="u" id="umbraco-source" action="https://github.com/search">
 		<name>Umbraco Sourcecode</name>
 		<textfield label="Search query" name="q" placeholder="E.g. 'IPublishedContent'" template="repo:umbraco/Umbraco-CMS $value" />
 		<data name="type" value="code" />
@@ -71,7 +71,7 @@
 		<data name="t" value="titles" />
 	</form>
 
-	<form id="playpilot" action="https://www.playpilot.com/dk/search/" allow-default="yes" default-from="imdb" default-template="$value">
+	<form key="p" id="playpilot" action="https://www.playpilot.com/dk/search/" allow-default="yes" default-from="imdb" default-template="$value">
 		<name>PlayPilot</name>
 		<textfield label="Search query" name="q" placeholder="E.g. 'the prestige'" />
 		<data name="t" value="titles" />
@@ -112,7 +112,7 @@
 		</group>
 	</form>
 
-	<form id="regex" action="https://www.regexdictionary.com/regex/">
+	<form key="r" id="regex" action="https://www.regexdictionary.com/regex/">
 		<name>RegEx Dictionary</name>
 		<textfield label="RegEx" name="r" placeholder="E.g. '^pin(s|ned)$'" />
 	</form>
