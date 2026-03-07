@@ -1,22 +1,28 @@
 <nav><ul>
-<li><a href="#search-valdemarsro">Valdemarsro</a></li>
-<li><a href="#search-madensverden">Madens Verden</a></li>
-<li><a href="#search-imdb">IMDb / Movies</a></li>
-<li><a href="#search-youtube">YouTube</a></li>
-<li><a href="#search-umbraco-source">Umbraco Sourcecode</a></li>
-<li><a href="#search-rotten-tomatoes">Rotten Tomatoes</a></li>
-<li><a href="#search-caniuse">Can I Use?</a></li>
 <li><a href="#search-punktumdk">.dk</a></li>
-<li><a href="#search-vimeo">Vimeo</a></li>
-<li><a href="#search-letterboxd">Letterboxd</a></li>
-<li><a href="#search-playpilot">PlayPilot</a></li>
-<li><a href="#search-justwatch">JustWatch</a></li>
-<li><a href="#search-dsn">Dansk Sprognævn</a></li>
 <li><a href="#search-phone118">118.dk</a></li>
+<li><a href="#search-caniuse">Can I Use?</a></li>
+<li><a href="#search-dsn">Dansk Sprognævn</a></li>
+<li>
+<a href="#search-imdb">IMDb / Movies</a> [m]</li>
+<li><a href="#search-justwatch">JustWatch</a></li>
+<li><a href="#search-letterboxd">Letterboxd</a></li>
+<li><a href="#search-madensverden">Madens Verden</a></li>
 <li><a href="#search-omdb">OMDb API</a></li>
-<li><a href="#search-tmdb">TMDb API</a></li>
-<li><a href="#search-regex">RegEx Dictionary</a></li>
+<li>
+<a href="#search-playpilot">PlayPilot</a> [p]</li>
+<li>
+<a href="#search-regex">RegEx Word Search</a> [r]</li>
 <li><a href="#search-dict-reverse">Reverse Dictionary</a></li>
+<li><a href="#search-rotten-tomatoes">Rotten Tomatoes</a></li>
+<li><a href="#search-tmdb">TMDb API</a></li>
+<li>
+<a href="#search-umbraco-source">Umbraco Sourcecode</a> [u]</li>
+<li>
+<a href="#search-valdemarsro">Valdemarsro</a> [v]</li>
+<li><a href="#search-vimeo">Vimeo</a></li>
+<li>
+<a href="#search-youtube">YouTube</a> [y]</li>
 </ul></nav><main>
 
 	<article id="search-valdemarsro"><header><h2>Valdemarsro</h2></header><form target="_blank" action="https://www.valdemarsro.dk/soeg/" data-allow-default="">
@@ -151,9 +157,14 @@
 	<p class="submission"><button type="submit">Search</button></p>
 </form></article>
 
-	<article id="search-regex"><header><h2>RegEx Dictionary</h2></header><form target="_blank" action="https://www.regexdictionary.com/regex/">
+	
+	<article id="search-regex"><header><h2>RegEx Word Search</h2></header><form target="_blank" action="https://regex-wordsearch.ophir.dev/">
 		
-		<label for="regex-r">RegEx</label><input name="r" type="search" placeholder="E.g. '^pin(s|ned)$'" id="regex-r" accesskey="r">
+		<label for="regex-search">RegEx</label><input name="search" type="search" placeholder="E.g. '^pin(s|ned)$'" id="regex-search" accesskey="r">
+		<div>
+<input type="checkbox" name="wholeword" value="on" id="wholeword-on" checked><label for="wholeword-on">Whole words only</label>
+</div>
+		<input type="hidden" name="lang" value="en">
 	<p class="submission"><button type="submit">Search</button></p>
 </form></article>
 
