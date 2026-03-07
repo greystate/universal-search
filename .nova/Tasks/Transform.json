@@ -4,5 +4,6 @@
       "enabled" : true,
       "script" : "xsltproc -o src\/kit\/_forms.kit src\/xslt\/makeforms.xslt src\/xml\/forms.xml"
     }
-  }
+  },
+  "openLogOnRun" : "fail"
 }

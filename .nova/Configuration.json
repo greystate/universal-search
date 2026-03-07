@@ -2,5 +2,8 @@
   "com.CodeKitApp.Nova.codekitFolder" : "\/Users\/chriz\/Development\/src\/universal-search",
   "workspace.art_style" : 0,
   "workspace.color" : 12,
-  "workspace.name" : "Universal Search"
+  "workspace.name" : "Universal Search",
+  "xml.catalogs" : [
+    "\/Users\/chriz\/Development\/src\/universal-search\/src\/xml\/catalog.xml"
+  ]
 }

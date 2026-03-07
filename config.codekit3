@@ -133,6 +133,22 @@
       "sI" : 0,
       "sU" : 1
     },
+    "\/src\/xml\/catalog.xml" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/xml\/catalog.xml",
+      "oF" : 0
+    },
+    "\/src\/xml\/contact.form.xml" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/xml\/contact.form.xml",
+      "oF" : 0
+    },
     "\/src\/xml\/forms.xml" : {
       "cB" : 0,
       "ft" : 8192,
