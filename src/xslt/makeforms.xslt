@@ -11,7 +11,11 @@
 		<nav>
 			<ul>
 				<xsl:for-each select="f:form">
-					<li><a href="#search-{@id}"><xsl:value-of select="f:name" /></a></li>
+					<xsl:sort select="f:name" order="ascending" />
+					<li>
+						<a href="#search-{@id}"><xsl:value-of select="f:name" /></a>
+						<xsl:if test="@key"><xsl:value-of select="concat(' [', @key, ']')" /></xsl:if>
+					</li>
 				</xsl:for-each>
 			</ul>
 		</nav>
