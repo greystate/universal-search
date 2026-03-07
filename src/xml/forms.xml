@@ -112,9 +112,17 @@
 		</group>
 	</form>
 
+	<!--
 	<form key="r" id="regex" action="https://www.regexdictionary.com/regex/">
 		<name>RegEx Dictionary</name>
 		<textfield label="RegEx" name="r" placeholder="E.g. '^pin(s|ned)$'" />
+	</form>
+	-->
+	<form key="r" id="regex" action="https://regex-wordsearch.ophir.dev/">
+		<name>RegEx Word Search</name>
+		<textfield label="RegEx" name="search" placeholder="E.g. '^pin(s|ned)$'" />
+		<toggle name="wholeword" value="on" checked="yes">Whole words only</toggle>
+		<data name="lang" value="en" />
 	</form>
 
 	<form id="dict-reverse" action="https://www.onelook.com/reverse-dictionary.shtml">
