@@ -96,7 +96,9 @@
 	<xsl:template match="f:toggle">
 		<xsl:variable name="toggleId" select="concat(@name, '-', @value)" />
 		<div>
-			<input type="checkbox" name="{@name}" value="{@value}" id="{$toggleId}" />
+			<input type="checkbox" name="{@name}" value="{@value}" id="{$toggleId}">
+				<xsl:if test="@checked = 'yes'"><xsl:attribute name="checked">checked</xsl:attribute></xsl:if>
+			</input>
 			<label for="{$toggleId}"><xsl:value-of select="." /></label>
 		</div>
 	</xsl:template>
