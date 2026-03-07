@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <uri name="http://xmlns.greystate.dk/2024/forms" uri="https://xmlns.greystate.dk/2024/forms/forms.xsd"/>
+</catalog>
